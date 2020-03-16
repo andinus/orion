@@ -9,8 +9,6 @@ Been Pwned API.
 *Note*: Your password is not sent anywhere, only the first 5 characters of the
 SHA-1 hash of the input is sent to HIBP API.
 
-*Note*: Padding is currently not supported by Orion.
-
 * Working
 - Orion takes input from the user
 - Input is hashed & split (prefix: [:5], suffix: [5:])
