@@ -9,6 +9,13 @@ Been Pwned API.
 *Note*: Your password is not sent anywhere, only the first 5 characters of the
 SHA-1 hash of the input is sent to HIBP API.
 
+* Demo
+I just run some cetus commands on my computer, nothing fancy. I'll make better
+demo videos someday.
+
+| Version | Video                                                                |
+|---------+----------------------------------------------------------------------|
+| v0.1.0  | https://diode.zone/videos/watch/ffd4021d-2b39-4e6a-993e-3eacf9323320 |
 * Working
 - Orion takes input from the user
 - Input is hashed & split (prefix: [:5], suffix: [5:])
