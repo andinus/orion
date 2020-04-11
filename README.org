@@ -6,11 +6,9 @@
 Orion is a simple program to check for compromised passwords using Have I
 Been Pwned API.
 
-Currently it only supports [[https://www.passwordstore.org][pass]], other password managers maybe be supported in
-the future.
-
-*Note*: Your password is not sent anywhere, only the first 5 characters of the
-SHA-1 hash of the input is sent to HIBP API.
+| Project Home    | [[https://andinus.nand.sh/orion/][Orion]]           |
+| Source Code     | [[https://tildegit.org/andinus/orion][Andinus / Orion]] |
+| GitHub (Mirror) | [[https://github.com/andinus/orion][Orion - GitHub]]  |
 
 * Demo
 | Demo Video   |
@@ -26,3 +24,8 @@ Match means the password is present in HIBP database & has been compromised.
 
 *Note*: Password not present in database doesn't mean that it is a strong
  password.
+* History
+Orion v0.1.0 was a simple cli application that asked user for password &
+returned the results. I almost never used this because I don't generate password
+in head, =pass= is my password manager & it stores all my passwords. So, the next
+version will check all my passwords from password store & return the results.
