@@ -1,26 +1,28 @@
-#+HTML_HEAD: <link rel="stylesheet" href="../../static/style.css">
-#+HTML_HEAD: <link rel="icon" href="../../static/projects/orion/favicon.png" type="image/png">
+#+HTML_HEAD: <link rel="stylesheet" href="../static/style.css">
+#+HTML_HEAD: <link rel="icon" href="../static/orion/favicon.png" type="image/png">
 #+EXPORT_FILE_NAME: index
 #+TITLE: Orion
 
-Orion is a simple cli client to check for compromised passwords using Have I
+Orion is a simple program to check for compromised passwords using Have I
 Been Pwned API.
+
+Currently it only supports [[https://www.passwordstore.org][pass]], other password managers maybe be supported in
+the future.
 
 *Note*: Your password is not sent anywhere, only the first 5 characters of the
 SHA-1 hash of the input is sent to HIBP API.
 
 * Demo
-I just run some cetus commands on my computer, nothing fancy. I'll make better
-demo videos someday.
-
-| Version | Video                                                                |
-|---------+----------------------------------------------------------------------|
-| v0.1.0  | https://diode.zone/videos/watch/ffd4021d-2b39-4e6a-993e-3eacf9323320 |
+| Demo Video   |
+|--------------|
+| [[https://diode.zone/videos/watch/ffd4021d-2b39-4e6a-993e-3eacf9323320][Orion v0.1.0]] |
 * Working
-- Orion takes input from the user
-- Input is hashed & split (prefix: [:5], suffix: [5:])
+- Password is hashed & split (prefix: [:5], suffix: [5:])
 - Prefix is sent to the HIBP API
 - HIBP API returns list of suffixes along with frequency
 - Orion looks for suffix from the list of suffixes
 
 Match means the password is present in HIBP database & has been compromised.
+
+*Note*: Password not present in database doesn't mean that it is a strong
+ password.
