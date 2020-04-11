@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
-// GetHsh takes a string as an input & returns SHA-1 Hash
-func GetHsh(pass string) string {
+// GetSHA1Hash takes a string as an input & returns SHA-1 Hash
+func GetSHA1Hash(pass string) string {
 	alg := sha1.New()
 	alg.Write([]byte(pass))
 
