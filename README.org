@@ -7,7 +7,7 @@ Orion is a simple program to check for compromised passwords using Have I
 Been Pwned API.
 
 | Project Home    | [[https://andinus.nand.sh/orion/][Orion]]           |
-| Source Code     | [[https://tildegit.org/andinus/orion][Andinus / Orion]] |
+| Source Code     | [[https://git.tilde.institute/andinus/orion][Andinus / Orion]] |
 | GitHub (Mirror) | [[https://github.com/andinus/orion][Orion - GitHub]]  |
 
 * Demo
