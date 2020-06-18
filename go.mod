@@ -1,4 +1,4 @@
-module framagit.org/andinus/orion
+module git.tilde.institute/andinus/orion
 
 go 1.13
 
