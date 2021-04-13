@@ -10,7 +10,8 @@
         "Orion::CLI" : "lib/Orion/CLI.rakumod",
     },
     "depends" : [
-        "WWW:ver<1.005006+>:auth<github:raku-community-modules>"
+        "Digest::SHA"
+        "LWP::Simple::auth<github:raku-community-modules>"
     ],
     "tags": [
         "Orion", "Password Store", "pass", "Have I Been Pwned", "HIBP"
