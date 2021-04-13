@@ -1,19 +1,20 @@
-#+SETUPFILE: ~/.emacs.d/org-templates/projects.org
-#+EXPORT_FILE_NAME: index
-#+TITLE: Orion
+#+title: Orion
+#+subtitle: Orion checks for compromised passwords using Have I Been Pwned API
+#+export_file_name: index
+#+setupfile: ~/.emacs.d/org-templates/projects.org
 
-Orion is a simple program to check for compromised passwords using Have I
-Been Pwned API.
-
-| Project Home    | [[https://andinus.nand.sh/orion/][Orion]]           |
-| Source Code     | [[https://git.tilde.institute/andinus/orion][Andinus / Orion]] |
-| GitHub (Mirror) | [[https://github.com/andinus/orion][Orion - GitHub]]  |
+| Website         | https://andinus.nand.sh/orion/            |
+| Source          | https://git.tilde.institute/andinus/orion |
+| GitHub (Mirror) | https://github.com/andinus/orion          |
 
 * Demo
+
 | Demo Video   |
 |--------------|
 | [[https://diode.zone/videos/watch/ffd4021d-2b39-4e6a-993e-3eacf9323320][Orion v0.1.0]] |
+
 * Working
+
 - Password is hashed & split (prefix: [:5], suffix: [5:])
 - Prefix is sent to the HIBP API
 - HIBP API returns list of suffixes along with frequency
@@ -21,10 +22,14 @@ Been Pwned API.
 
 Match means the password is present in HIBP database & has been compromised.
 
-*Note*: Password not present in database doesn't mean that it is a strong
- password.
+- *Note*: Password not present in database doesn't mean that it is a
+  strong password.
+
 * History
+
 Orion v0.1.0 was a simple cli application that asked user for password &
-returned the results. I almost never used this because I don't generate password
-in head, =pass= is my password manager & it stores all my passwords. So, the next
-version will check all my passwords from password store & return the results.
+returned the results. I never used this because I don't generate
+password in head, ~pass~ is my password manager & it stores all my
+passwords.
+
+Orion was ported from Go to Raku.
