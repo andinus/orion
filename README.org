@@ -9,9 +9,7 @@
 
 * Demo
 
-| Demo Video   |
-|--------------|
-| [[https://diode.zone/videos/watch/ffd4021d-2b39-4e6a-993e-3eacf9323320][Orion v0.1.0]] |
+- Orion v0.1.0 :: https://diode.zone/videos/watch/ffd4021d-2b39-4e6a-993e-3eacf9323320
 
 * Working
 
