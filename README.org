@@ -11,7 +11,14 @@
 
 - Orion v0.1.0 :: https://diode.zone/videos/watch/ffd4021d-2b39-4e6a-993e-3eacf9323320
 
-* Working
+* Documentation
+
+** Implementation
+
+Initially it presented a simple prompt that accepted a password & it
+checked that password against HIBP database. Orion v0.2.0+ checks for
+compromised passwords in my password store. It builds a list of all the
+passwords in =~/.password-store= & performs these operations on each file:
 
 - Password is hashed & split (prefix: [:5], suffix: [5:])
 - Prefix is sent to the HIBP API
@@ -22,6 +29,12 @@ Match means the password is present in HIBP database & has been compromised.
 
 - *Note*: Password not present in database doesn't mean that it is a
   strong password.
+
+** Options
+
+*** verbose
+
+This option does nothing.
 
 * History
 
