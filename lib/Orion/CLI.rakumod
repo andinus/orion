@@ -1,8 +1,6 @@
 use LWP::Simple;
 use Digest::SHA;
 
-#proto MAIN(|) is export { unless so @*ARGS { say $*USAGE; exit }; {*} }
-
 multi sub MAIN(
     Bool :$verbose, #=increase verbosity
 ) is export {
@@ -27,11 +25,10 @@ multi sub MAIN(
                 Add-Padding => "true",
                 User-Agent => "Andinus / Orion - https://andinus.nand.sh/orion",
             }
-        ).lines.map(*.split(":")) -> ($entry, $freq) {
-            next if $freq == 0;
-            if $hash.substr(5, *) eq $entry.split(":").head {
-                say $file.Str.split('.password-store/').tail.split('.gpg').first, " ",
-                "has been seen $freq times before.";
+        ).lines.map(*.split(":")).grep(*[1] > 0) -> ($entry, $freq) {
+            if $hash.substr(5, *) eq $entry {
+                my Str $pass = $file.Str.split('.password-store/').tail.split('.gpg').first;
+                say $pass, " " x (72 - $pass.chars - $freq.chars), $freq;
             };
         }
     }
