@@ -1,7 +1,7 @@
 {
     "name" : "orion",
     "auth" : "github:andinus",
-    "version" : "0.2.0",
+    "version" : "0.2.1",
     "description" : "Orion checks for compromised passwords using Have I Been Pwned API",
     "authors" : [ "Andinus <andinus@nand.sh>" ],
     "license" : "ISC",
@@ -14,7 +14,7 @@
         "LWP::Simple::auth<github:raku-community-modules>"
     ],
     "tags": [
-        "Orion", "Password Store", "pass", "Have I Been Pwned", "HIBP"
+        "Orion", "PasswordStore", "pass", "HaveIBeenPwned", "HIBP"
     ],
     "source-url" : "https://git.tilde.institute/andinus/orion"
 }
