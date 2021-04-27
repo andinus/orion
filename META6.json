@@ -1,16 +1,16 @@
 {
     "name" : "orion",
     "auth" : "github:andinus",
-    "version" : "0.2.1",
+    "version" : "0.2.2",
     "description" : "Orion checks for compromised passwords using Have I Been Pwned API",
     "authors" : [ "Andinus <andinus@nand.sh>" ],
     "license" : "ISC",
     "perl" : "6.d",
     "provides" : {
-        "Orion::CLI" : "lib/Orion/CLI.rakumod",
+        "Orion::CLI" : "lib/Orion/CLI.rakumod"
     },
     "depends" : [
-        "Digest::SHA"
+        "Digest::SHA",
         "LWP::Simple::auth<github:raku-community-modules>"
     ],
     "tags": [
