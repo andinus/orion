@@ -1,6 +1,6 @@
 {
     "name" : "orion",
-    "auth" : "github:andinus",
+    "auth" : "zef:andinus",
     "version" : "0.2.2",
     "description" : "Orion checks for compromised passwords using Have I Been Pwned API",
     "authors" : [ "Andinus <andinus@nand.sh>" ],
@@ -11,7 +11,7 @@
     },
     "depends" : [
         "Digest::SHA",
-        "LWP::Simple::auth<github:raku-community-modules>"
+        "LWP::Simple:auth<zef:dwarring>"
     ],
     "tags": [
         "Orion", "PasswordStore", "pass", "HaveIBeenPwned", "HIBP"
