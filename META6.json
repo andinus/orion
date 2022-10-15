@@ -1,7 +1,7 @@
 {
     "name" : "orion",
     "auth" : "zef:andinus",
-    "version" : "0.2.2",
+    "version" : "0.2.3",
     "description" : "Orion checks for compromised passwords using Have I Been Pwned API",
     "authors" : [ "Andinus <andinus@nand.sh>" ],
     "license" : "ISC",
