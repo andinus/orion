@@ -34,7 +34,7 @@ Match means the password is present in HIBP database & has been compromised.
 
 *** verbose
 
-This option does nothing.
+If enabled, it prints a "." for every password entry it checks.
 
 * History
 

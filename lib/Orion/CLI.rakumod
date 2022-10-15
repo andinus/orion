@@ -16,9 +16,13 @@ multi sub MAIN(
     }
 
     for @files -> $file {
+        print "." if $verbose;
+
         my $proc = run <gpg2>, '--decrypt', '--quiet', $file, :out;
+        # Read the password, convert it to hex & uppercase.
         my Str $hash = uc buf_to_hex sha1 $proc.out.slurp(:close).lines.head;
 
+        # Send the prefix to HIBP API.
         for LWP::Simple.get(
             "$api/range/{ $hash.substr(0, 5) }",
             {
@@ -26,12 +30,17 @@ multi sub MAIN(
                 User-Agent => "Andinus / Orion - https://andinus.nand.sh/orion",
             }
         ).lines.map(*.split(":")).grep(*[1] > 0) -> ($entry, $freq) {
+            # Compare all the suffixes with our hash suffix.
             if $hash.substr(5, *) eq $entry {
+                # Get the password name.
                 my Str $pass = $file.Str.split('.password-store/').tail.split('.gpg').first;
-                say $pass, " " x (72 - $pass.chars - $freq.chars), $freq;
-            };
+                # Print the compromised password entry.
+                print "\n" if $verbose;
+                put $pass, " " x (72 - $pass.chars - $freq.chars), $freq;
+            }
         }
     }
+    print "\n" if $verbose;
 }
 
 sub buf_to_hex { [~] $^buf.list».fmt: "%02x" }
